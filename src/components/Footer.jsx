@@ -2,7 +2,10 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <div>
+      Footer
+      <p><a href='https://pngtree.com/so/gym'>gym png from pngtree.com/</a></p>
+    </div>
   )
 }
 
