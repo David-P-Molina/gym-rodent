@@ -14,7 +14,23 @@ const Navbar = () => {
         }}/>
       </Link>
       <Stack>
-        <Link to="/">Home</Link>
+        <Link 
+          to="/" 
+          style={{
+            textDecoration: 'none', 
+            color: "#40040F", 
+            borderBottom: '3px solid #F2D888',
+          }}>
+              Home
+        </Link>
+        <a 
+          href="#exercises" 
+          style={{
+            textDecoration: 'none', 
+            color: "#40040F", 
+          }}>
+          Exercise
+        </a>
       </Stack>
     </Stack>
   )
