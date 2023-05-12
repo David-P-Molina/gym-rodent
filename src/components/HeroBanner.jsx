@@ -33,6 +33,16 @@ const HeroBanner = () => {
         >
         Explore Exercises
       </Button>
+      <Typography
+        fontWeight={600}
+        color="#FF2625"
+        sx={{
+          opacity: 0.1,
+          display: { lg: 'block', xs: 'none'}
+        }}
+        >
+        Exercise
+      </Typography>
       <img 
         src={ HeroBannerImage } 
         alt="Workout Banner"
