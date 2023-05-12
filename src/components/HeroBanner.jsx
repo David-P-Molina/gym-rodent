@@ -4,6 +4,7 @@ import HeroBannerImage from '../assets/images/banner.png'
 
 const HeroBanner = () => {
   return (
+    <Stack direction="row">
     <Box sx={{
       mt: {lg: '212px', xs: '70px'},
       ml: { sm: '50px'}
@@ -47,11 +48,14 @@ const HeroBanner = () => {
         >
         Exercise
       </Typography>
-      <img 
-        src={ HeroBannerImage } 
-        alt="Workout Banner"
-        className="hero-banner-img"/>
-    </Box>
+          </Box>
+        <Box>
+        <img 
+          src={ HeroBannerImage } 
+          alt="Workout Banner"
+          className="hero-banner-img"/>
+        </Box>
+      </Stack>
   )
 }
 
