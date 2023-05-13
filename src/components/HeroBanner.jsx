@@ -21,7 +21,7 @@ const HeroBanner = () => {
         <Typography fontSize='22px' lineHeight='35px' mb={4} fontFamily="Alegreya">
           Check out new exercises and keep your body working!
         </Typography>
-        <Button variant="contained" color="error" href="#exercises">
+        <Button variant="contained" color="error" href="#exercises" sx={{ backgroundColor: '#023859'}}>
           Explore Exercises
         </Button>
         <Typography
