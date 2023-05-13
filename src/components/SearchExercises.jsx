@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { Box, Button, Stack, TextField, Typography } from '@mui/material'
 
 const SearchExercises = () => {
+  const handleOnChange = (event) => {
+    // create state for event.target.value 
+  }
   return (
     <Stack alignItems="center" mt="35px" justifyContent="center" p="20px">
       <Typography fontWeight={700} 
@@ -12,6 +15,8 @@ const SearchExercises = () => {
       <TextField
         height="76px"
         value=""
+        placeholder="Search Exercises"
+        type="text"
         onChange={handleOnChange}/>
     </Stack>
   )
