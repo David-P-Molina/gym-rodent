@@ -9,6 +9,10 @@ const SearchExercises = () => {
         mb="50px" textAlign="center" >
         New Exercises to check out
       </Typography>
+      <TextField
+        height="76px"
+        value=""
+        onChange={handleOnChange}/>
     </Stack>
   )
 }
