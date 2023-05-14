@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { Box, Button, Stack, TextField, Typography } from '@mui/material'
 
 const SearchExercises = () => {
+  const [ search, setSearch ] = useState('')
   const handleOnChange = (event) => {
-    // create state for event.target.value 
+    setSearch(event.target.value.toLowerCase())
   }
   return (
     <Stack alignItems="center" mt="35px" justifyContent="center" p="20px">
@@ -24,7 +25,7 @@ const SearchExercises = () => {
             backgroundColor: '#FFF', borderRadius: '40px'
           }}
           height="76px"
-          value=""
+          value={search}
           placeholder="Search Exercises..."
           type="text"
           onChange={handleOnChange}/>
