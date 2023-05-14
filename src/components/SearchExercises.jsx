@@ -13,9 +13,18 @@ const SearchExercises = () => {
         New Exercises to check out
       </Typography>
       <TextField
+        sx={{
+          input: {
+            fontWeight: '700',
+            border: 'none',
+            borderRadius: '4px'
+          },
+          width: { lg: '1170px', xs: '350px'},
+          backgroundColor: '#FFF', borderRadius: '40px'
+        }}
         height="76px"
         value=""
-        placeholder="Search Exercises"
+        placeholder="Search Exercises..."
         type="text"
         onChange={handleOnChange}/>
     </Stack>
