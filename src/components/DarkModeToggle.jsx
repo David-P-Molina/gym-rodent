@@ -10,11 +10,11 @@ const DarkModeToggle = () => {
         const cssFileName = isDarkMode ? 'dark.css' : 'light.css';
         const linkElement = document.getElementById('theme-style');
         console.log(linkElement)
-        // linkElement.href = cssFileName;
+        linkElement.href = cssFileName;
       }, [isDarkMode]);
   return (
     <Button onClick={handleDarkModeToggle}>
-        DarkModeToggle
+        {isDarkMode ? 'Light Mode' : 'Dark Mode'}
     </Button>
   )
 }
