@@ -41,7 +41,7 @@ const Navbar = () => {
           }}>
           Exercise
         </a>
-        <DarkModeToggle/>
+        <DarkModeToggle />
       </Stack>
     </Stack>
   )
