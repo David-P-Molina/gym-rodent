@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Box, Button, Stack, TextField, Typography } from '@mui/material'
+import { exerciseOptions, fetchData } from '../utils/fetchData'
 
 const SearchExercises = () => {
   const [ search, setSearch ] = useState('')
@@ -9,7 +10,9 @@ const SearchExercises = () => {
   }
   const handleSearch = async () => {
     if(search) {
-      // const exercisesData = await fetchData()
+      const url = 'https://exercisedb.p.rapidapi.com/exercises/bodyPartList'
+      const exercisesData = await fetchData(url, exerciseOptions)
+      console.log(exercisesData)
     }
   }
   return (
