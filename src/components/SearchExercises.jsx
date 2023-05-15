@@ -34,10 +34,10 @@ const SearchExercises = () => {
           value={search}
           placeholder="Search Exercises..."
           type="text"
-          onChange={handleOnChange()}/>
+          onChange={handleOnChange}/>
           <Button 
             className="search-btn"
-            onClick={handleOnClick()}
+            onClick={handleOnClick}
             sx={{
               bgcolor: '#023859',
               color: '#FFF',
