@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Stack } from '@mui/material'
 import Logo from '../assets/images/Logo.png'
+import DarkModeToggle from './DarkModeToggle'
 const Navbar = () => {
   return (
     <Stack 
@@ -40,6 +41,7 @@ const Navbar = () => {
           }}>
           Exercise
         </a>
+        <DarkModeToggle/>
       </Stack>
     </Stack>
   )
