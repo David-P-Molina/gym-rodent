@@ -7,7 +7,7 @@ const SearchExercises = () => {
   const handleOnChange = (event) => {
     setSearch(event.target.value.toLowerCase())
   }
-  const handleOnClick = async () => {
+  const handleSearch = async () => {
     if(search) {
       // const exercisesData = await fetchData()
     }
@@ -37,7 +37,7 @@ const SearchExercises = () => {
           onChange={handleOnChange}/>
           <Button 
             className="search-btn"
-            onClick={handleOnClick}
+            onClick={handleSearch}
             sx={{
               bgcolor: '#023859',
               color: '#FFF',
