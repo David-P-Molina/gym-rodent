@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { Button } from '@mui/material'
 
 const DarkModeToggle = () => {
+    const [ isDarkMode, setIsDarkMode ] = useState('false');
+
   return (
-    <div>DarkModeToggle</div>
+    <Button>
+        DarkModeToggle
+    </Button>
   )
 }
 
