@@ -7,10 +7,11 @@ const DarkModeToggle = () => {
         setIsDarkMode(!isDarkMode)
     }
     useEffect(() => {
-        const cssFileName = isDarkMode ? 'dark.css' : 'light.css';
-        const linkElement = document.getElementById('theme-style');
-        //Not switching colors on click
-        linkElement.href = cssFileName;
+        if (isDarkMode) {
+            document.body.classList.add("dark-mode")
+        } else {
+            document.body.classList.remove("dark-mode")
+        }
       }, [isDarkMode]);
   return (
     <Button onClick={handleDarkModeToggle}>
