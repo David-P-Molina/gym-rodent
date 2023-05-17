@@ -4,6 +4,7 @@ import { exerciseOptions, fetchData } from '../utils/fetchData'
 
 const SearchExercises = () => {
   const [ search, setSearch ] = useState('')
+  const [ exerciseList, setExerciseList ] = useState([])
 
   const handleOnChange = (event) => {
     setSearch(event.target.value.toLowerCase())
@@ -13,13 +14,15 @@ const SearchExercises = () => {
       const url = 'https://exercisedb.p.rapidapi.com/exercises/'
       const exercisesData = await fetchData(url, exerciseOptions)
       
-      const searchedExercise = exercisesData.filter(
+      const filteredExercises = exercisesData.filter(
         (exercise) => exercise.bodyPart.toLowerCase().includes(search)
         || exercise.name.toLowerCase().includes(search)
         || exercise.equipment.toLowerCase().includes(search)
         || exercise.target.toLowerCase().includes(search)
       )
-      console.log(searchedExercise)
+      setExerciseList(filteredExercises)
+      setSearch('')
+      console.log(filteredExercises)
     }
   }
   return (
