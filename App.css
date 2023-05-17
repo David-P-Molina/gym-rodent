@@ -1,5 +1,12 @@
 body {
   font-family: 'Josefin Sans';
+  background-color: #FFFAFB;
+  color: #333;
+}
+
+body.dark-mode {
+  background-color: #222;
+  color: #fff;
 }
 
 * {
