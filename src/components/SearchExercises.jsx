@@ -15,7 +15,11 @@ const SearchExercises = () => {
       
       const searchedExercise = exercisesData.filter(
         (exercise) => exercise.bodyPart.toLowerCase().includes(search)
+        || exercise.name.toLowerCase().includes(search)
+        || exercise.equipment.toLowerCase().includes(search)
+        || exercise.target.toLowerCase().includes(search)
       )
+      console.log(searchedExercise)
     }
   }
   return (
