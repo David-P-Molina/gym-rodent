@@ -12,3 +12,4 @@ export const fetchData = async ( url, options ) => {
 
     return data
 }
+export const baseUrl = 'https://exercisedb.p.rapidapi.com/exercises/'
