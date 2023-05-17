@@ -9,7 +9,7 @@ const DarkModeToggle = () => {
     useEffect(() => {
         const cssFileName = isDarkMode ? 'dark.css' : 'light.css';
         const linkElement = document.getElementById('theme-style');
-        console.log(linkElement)
+        //Not switching colors on click
         linkElement.href = cssFileName;
       }, [isDarkMode]);
   return (
