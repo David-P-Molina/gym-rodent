@@ -14,8 +14,12 @@ const DarkModeToggle = () => {
         }
       }, [isDarkMode]);
   return (
-    <Button onClick={handleDarkModeToggle}>
-        {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+    <Button 
+        onClick={handleDarkModeToggle} 
+        variant="contained" 
+        color="error" 
+        sx={{ backgroundColor: '#023859'}}>
+        {isDarkMode ? 'Enable Light Mode' : 'Enable Dark Mode'}
     </Button>
   )
 }
