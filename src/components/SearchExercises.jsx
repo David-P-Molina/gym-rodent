@@ -5,13 +5,15 @@ import { baseUrl, exerciseOptions, fetchData } from '../utils/fetchData'
 const SearchExercises = () => {
   const [ search, setSearch ] = useState('')
   const [ exerciseList, setExerciseList ] = useState([])
-
+  const [ bodyPartList, setBodyPartList ] = useState([])
+  
   useEffect(() =>{
     const fetchExerciseData = async () => {
       const bodyPartsData = await fetchData(`${baseUrl}bodyPartList`, exerciseOptions)
-      console.log(bodyPartsData)
+      setBodyPartList(bodyPartsData)
     }
-  })
+    fetchExerciseData()
+  },[])
   const handleOnChange = (event) => {
     setSearch(event.target.value.toLowerCase())
   }
