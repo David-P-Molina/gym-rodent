@@ -1,20 +1,20 @@
 import React from 'react'
 import { Stack, Box } from '@mui/material'
-import PartDetail from './PartDetail.jsx'
+import PartDetail from './PartDetail'
 
 const HorizontalScrollBar = ({ data }) => {
   return (
     <Stack>
-        {data.map((item) => {
+        {data.map((item) => (
             <Box 
                 key={item.id || item}
-                itemId={item.id || item}
+                itemID={item.id || item}
                 title={item.id || item}
                 m="0 40px">
-                   <PartDetail part={item} /> 
+                   <PartDetail item={item} /> 
             </Box>
-        })}
-    </Sta>
+        ))}
+    </Stack>
   )
 }
 
