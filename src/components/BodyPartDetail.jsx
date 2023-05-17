@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PartDetail = ({ item }) => {
+const BodyPartDetail = ({ item }) => {
   return (
     <div>{item}</div>
   )
