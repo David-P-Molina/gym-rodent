@@ -1,8 +1,12 @@
 import React from 'react'
+import { Stack, Typography } from '@mui/material'
+import BodyPartIcon from '../assets/icons/body-part.png'
 
 const BodyPartDetail = ({ item, bodyPart, setBodyPart }) => {
   return (
-    <div>{item}</div>
+    <Stack>
+      {item}
+    </Stack>
   )
 }
 
