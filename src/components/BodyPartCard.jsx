@@ -2,7 +2,7 @@ import React from 'react'
 import { Stack, Typography } from '@mui/material'
 import BodyPartIcon from '../assets/icons/gym.png'
 
-const BodyPartDetail = ({ item, bodyPart, setBodyPart }) => {
+const BodyPartCard = ({ item, bodyPart, setBodyPart }) => {
   return (
     <Stack 
       type="button"
@@ -17,7 +17,7 @@ const BodyPartDetail = ({ item, bodyPart, setBodyPart }) => {
           width: '270px', 
           height: '282px', 
           cursor: 'pointer', 
-          gap: '47px' }  : ''
+          gap: '47px' }  : {}
       }>
       <img src={BodyPartIcon} alt='icon' styles={{ width: '40px', height: '40px' }}/>
       <Typography>
@@ -26,4 +26,4 @@ const BodyPartDetail = ({ item, bodyPart, setBodyPart }) => {
   )
 }
 
-export default BodyPartDetail
+export default BodyPartCard
