@@ -11,22 +11,15 @@ const BodyPartCard = ({ item, bodyPart, setBodyPart }) => {
       justifyContent="center"
       className="bodyPart-card"
       onClick={()=> setBodyPart(item)}
-      sx={
-        bodyPart === item ? {
-          borderTop: '4px solid #FF2625', 
+      sx={{
+          borderTop: bodyPart === item ? '4px solid #FF2625' : '', 
           background: '#fff', 
           borderBottomLeftRadius: '20px', 
           width: '270px', 
           height: '282px', 
           cursor: 'pointer', 
-          gap: '47px' }  : { 
-            background: '#FFF', 
-            borderBottomLeftRadius: '20px', 
-            width: '270px', 
-            height: '282px', 
-            cursor: 'pointer', 
-            gap: '47px' }
-      }>
+          gap: '47px'
+      }}>
       <img src={BodyPartIcon} alt='icon' styles={{ width: '40px', height: '40px' }}/>
       <Typography>
       </Typography>
