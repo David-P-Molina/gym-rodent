@@ -23,8 +23,19 @@ const BodyPartCard = ({ item, bodyPart, setBodyPart }) => {
         cursor: 'pointer', 
         gap: '47px'
       }}>
-      <img src={BodyPartIcon} alt='icon' style={{ width: '40px', height: '40px' }}/>
-      <Typography fontSize="24px" fontWeight="bold" color="#3A1212" textTransform="capitalize">
+      <img 
+        src={BodyPartIcon} 
+        alt='icon' 
+        style={{ 
+          width: '40px', 
+          height: '40px' 
+        }}
+      />
+      <Typography 
+        fontSize="24px" 
+        fontWeight="bold" 
+        color="#3A1212" 
+        textTransform="capitalize">
         {item}
       </Typography>
     </Stack>
