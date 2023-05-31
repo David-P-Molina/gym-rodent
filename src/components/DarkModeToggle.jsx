@@ -18,7 +18,7 @@ const DarkModeToggle = () => {
         onClick={handleDarkModeToggle} 
         variant="contained" 
         color="error" 
-        sx={{ backgroundColor: '#023859'}}>
+        sx={{ backgroundColor: isDarkMode ? '#949AA6' : '#023859'}}>
         {isDarkMode ? 'Enable Light Mode' : 'Enable Dark Mode'}
     </Button>
   )
