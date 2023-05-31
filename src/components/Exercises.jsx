@@ -12,7 +12,10 @@ const Exercises = ({ exercises, setExercises, bodyPart}) => {
       sx={{ mt: {lg: '110px'}}}
       mt='50px'
       p='20px'>
-        <Typography variant='h4'>
+        <Typography 
+          variant='h4'
+          ml='12px'
+          pb='12px'>
           Showing Results
         </Typography>
       <Stack direction="row" 
