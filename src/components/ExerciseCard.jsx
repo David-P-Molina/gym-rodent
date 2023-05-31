@@ -10,16 +10,23 @@ const ExerciseCard = ({ exercise }) => {
         <Button 
           sx={{ 
             ml: '21px', color: '#FFF', 
-            background: '#FFA9A9', fontSize: '14px', 
-            borderRadius: '20px', textTransform: 'capitalize'}}>
-              
+            background: '#091B40', fontSize: '14px', 
+            borderRadius: '10px', textTransform: 'capitalize'}}>
+              {exercise.bodyPart}
             </Button>
-        <Typography variant="h6">
+            <Button 
+          sx={{ 
+            ml: '21px', color: '#FFF', 
+            background: '#949AA6', fontSize: '14px', 
+            borderRadius: '10px', textTransform: 'capitalize'}}>
+              {exercise.targetMuscle}
+            </Button>
+        {/* <Typography variant="h6">
           Name: {exercise.name}
         </Typography>
         <Typography variant="body">
           Equipment:{exercise.equipment}
-        </Typography>
+        </Typography> */}
       </Stack>
     </Link>
   )
