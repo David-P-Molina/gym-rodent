@@ -7,10 +7,14 @@ import ExerciseVideos from '../components/ExerciseVideos'
 import SimilarExercises from '../components/SimilarExercises'
 
 const ExerciseDetail = () => {
-  const [exerciseDetail, setexerciseDetail] = useState({})
+  const [exerciseDetail, setExerciseDetail] = useState({})
   const { id } = useParams()
   useEffect(() => {
-  
+    const fetchData = async () => {
+      const data = await fetchData(baseUrl, exerciseOptions)
+      setExerciseDetail(data)
+    }
+    fetchData()
   }, [])
   
   return (
