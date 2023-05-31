@@ -12,22 +12,22 @@ const ExerciseCard = ({ exercise }) => {
             ml: '21px', color: '#FFF', 
             background: '#091B40', fontSize: '14px', 
             borderRadius: '10px', textTransform: 'capitalize'}}>
-              {exercise.bodyPart}
-            </Button>
-            <Button 
+          {exercise.bodyPart}
+        </Button>
+        <Button 
           sx={{ 
             ml: '21px', color: '#FFF', 
             background: '#949AA6', fontSize: '14px', 
             borderRadius: '10px', textTransform: 'capitalize'}}>
-              {exercise.targetMuscle}
-            </Button>
-        {/* <Typography variant="h6">
-          Name: {exercise.name}
-        </Typography>
-        <Typography variant="body">
+          {exercise.targetMuscle}
+        </Button>
+      </Stack>
+      <Typography variant="h6">
+        Name: {exercise.name}
+      </Typography>
+        {/*<Typography variant="body">
           Equipment:{exercise.equipment}
         </Typography> */}
-      </Stack>
     </Link>
   )
 }
