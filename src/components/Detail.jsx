@@ -6,7 +6,6 @@ import EquipmentImage from '../assets/icons/equipment.png'
 
 const Detail = ({ exerciseDetail }) => {
   const { bodyPart, gifUrl, name, target, equipment } = exerciseDetail
-  console.log(exerciseDetail)
   return (
     <Stack
       gap='60px'
@@ -15,7 +14,18 @@ const Detail = ({ exerciseDetail }) => {
         p: '20px',
         alignItems: 'center'
       }}>
-      <img src={ gifUrl } alt={ name } loading='lazy' className='detail-image' />
+      <img 
+        src={ gifUrl } alt={ name } 
+        loading='lazy' className='detail-image' />
+      <Stack sx={{ gap: { lg: '35px', xs: '20px'}}}>
+        <Typography>
+          {name}
+        </Typography>
+        <Typography>
+          Exercises keep you strong. The {name} exercise is one of the best at 
+          targeting your {bodyPart}. it will help you improve your mood & energy
+        </Typography>
+      </Stack>
     </Stack>
   )
 }
