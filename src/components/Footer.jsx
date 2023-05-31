@@ -1,8 +1,13 @@
 import React from 'react'
+import { Stack } from '@mui/material'
 
 const Footer = () => {
   return (
-    <div>
+    <Stack 
+      direction='row' 
+      justifyContent='space-around' 
+      alignItems='flex-end'
+      space={0}>
       Footer
       <p>
         <a href='https://pngtree.com/so/gym'>gym png from pngtree.com/</a>
@@ -12,7 +17,7 @@ const Footer = () => {
           Austin Wilcox's Image from Unsplash.com
         </a>
       </span>
-    </div>
+    </Stack>
   )
 }
 
