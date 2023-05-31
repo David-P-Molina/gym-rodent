@@ -19,11 +19,13 @@ const ExerciseCard = ({ exercise }) => {
             ml: '21px', color: '#FFF', 
             background: '#949AA6', fontSize: '14px', 
             borderRadius: '10px', textTransform: 'capitalize'}}>
-          {exercise.targetMuscle}
+          {exercise.target}
         </Button>
       </Stack>
-      <Typography variant="h6">
-        Name: {exercise.name}
+      <Typography 
+        ml='21px' textTransform='capitalize'
+        color='#02060D' fontWeight='bold' mt='11px'>
+        {exercise.name}
       </Typography>
         {/*<Typography variant="body">
           Equipment:{exercise.equipment}
