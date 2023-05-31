@@ -27,9 +27,11 @@ const ExerciseCard = ({ exercise }) => {
         color='#02060D' fontWeight='bold' mt='11px'>
         {exercise.name}
       </Typography>
-        {/*<Typography variant="body">
-          Equipment:{exercise.equipment}
-        </Typography> */}
+      <Typography 
+        color='#061426'variant="body" 
+        textTransform='capitalize' ml='21px'>
+        {exercise.equipment}
+      </Typography>
     </Link>
   )
 }
