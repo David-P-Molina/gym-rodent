@@ -5,7 +5,11 @@ import { exerciseOptions, fetchData, baseUrl } from '../utils/fetchData'
 
 const ExerciseDetail = () => {
   return (
-    <div>ExerciseDetail</div>
+    <Box>
+      <Detail />
+      <ExerciseVideos />
+      <SimilarExercises />
+    </Box>
   )
 }
 
