@@ -5,7 +5,7 @@ import BodyPartIcon from '../assets/icons/gym.png'
 const BodyPartCard = ({ item, bodyPart, setBodyPart }) => {
   const handleOnClick = () => {
     setBodyPart(item)
-    window.scrollTo({ top: 1800, behavior: 'smooth'})
+    window.scrollTo({ top: 1740, behavior: 'smooth'})
   }
   return (
     <Stack 
