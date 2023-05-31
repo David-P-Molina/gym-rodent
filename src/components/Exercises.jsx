@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Pagination from '@mui/material/Pagination'
 import { Box, Stack, Typography } from '@mui/material'
-
-import { exerciseOptions, fetchData } from '../utils/fetchData'
+import { baseUrl, exerciseOptions, fetchData } from '../utils/fetchData'
 import ExerciseCard from './ExerciseCard'
 
 const Exercises = ({ exercises, setExercises, bodyPart}) => {
@@ -16,6 +15,19 @@ const Exercises = ({ exercises, setExercises, bodyPart}) => {
     setCurrentPage(value)
     window.scrollTo({ top: 1740, behavior: 'smooth'})
   }
+  useEffect(() => {
+    const fetchExercisesData = async () => {
+      let exercisesData = [];
+      if(bodyPart === 'all') {
+        exercisesData = await fetchData(baseUrl, exerciseOptions)
+      } else {
+        exercisesData = await fetchData(`${baseUrl}bodyPart/${bodyPart}`, exerciseOptions)
+      } 
+      setExercises(exercisesData)
+    }
+    fetchExercisesData()
+  }, [bodyPart])
+  
   return (
     <Box id="exercises"
       sx={{ mt: {lg: '110px'}}}
