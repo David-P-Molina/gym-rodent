@@ -18,10 +18,10 @@ const Detail = ({ exerciseDetail }) => {
         src={ gifUrl } alt={ name } 
         loading='lazy' className='detail-image' />
       <Stack sx={{ gap: { lg: '35px', xs: '20px'}}}>
-        <Typography>
+        <Typography variant='h4' fontWeight='bold'>
           {name}
         </Typography>
-        <Typography>
+        <Typography variant='h6'>
           Exercises keep you strong. The {name} exercise is one of the best at 
           targeting your {bodyPart}. it will help you improve your mood & energy
         </Typography>
