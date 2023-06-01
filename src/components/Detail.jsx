@@ -42,8 +42,8 @@ const Detail = ({ exerciseDetail }) => {
         </Typography>
         {extraDetail.map((item) => (
           <Stack key={item.name} direction='row' gap='24px' alignItems='center'>
-            <Button>
-              <img src={item.icon} alt={item.name} />
+            <Button sx={{ background: '#04D9D9', borderRadius: '100px', width: '100px', height: '100px'}}>
+              <img src={item.icon} alt={item.name} sx={{width: '50px', height: '50px'}} />
             </Button>
             <Typography textTransform='capitalize'>
               {item.name}
