@@ -9,6 +9,8 @@ import SimilarExercises from '../components/SimilarExercises'
 const ExerciseDetail = () => {
   const [exerciseDetail, setExerciseDetail] = useState({})
   const [videosList, setVideosList] = useState([])
+  const [targetMuscleExercises, setTargetMuscleExercises] = useState([])
+  const [equipmentExercises, setEquipmentExercises] = useState([])
   const { id } = useParams()
   useEffect(() => {
     const fetchExerciseData = async () => {
@@ -17,6 +19,12 @@ const ExerciseDetail = () => {
 
       const exerciseVideoData = await fetchData(`${baseYouTubeURL}/search?query=${exerciseDetailData.name}`, youTubeOptions)
       setVideosList(exerciseVideoData.contents)
+
+      const targetMuscleExercisesData = await fetchData(`${baseUrl}target/${exerciseDetailData.target}`, exerciseOptions)
+      setTargetMuscleExercises(targetMuscleExercisesData)
+      
+      const equipmentExercisesData = await fetchData(`${baseUrl}equipment/${exerciseDetailData.equipment}`, exerciseOptions)
+      setEquipmentExercises(equipmentExercisesData)
     }
     fetchExerciseData()
   }, [id])
