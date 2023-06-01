@@ -12,7 +12,16 @@ const ExerciseVideos = ({ videosList, name }) => {
           flexDirection: { lg: 'row' },
           gap: { lg: '100px', xs: '0px'}
         }}>
-
+          {videosList?.slice(0,4).map((video, index) => {
+            <a
+              key={index}
+              className='exercise-video'
+              href={`https://www.youtube.com/watch?v=${video.video.videoId}`}
+              target="_blank"
+              rel='noreferrer'>
+                <img src={video.video.thumbnails[0].url} alt={video.video.title}/>
+            </a>
+            })}
       </Stack>
     </Box>
   )

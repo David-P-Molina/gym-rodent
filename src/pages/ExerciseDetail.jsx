@@ -15,7 +15,7 @@ const ExerciseDetail = () => {
       const exerciseDetailData = await fetchData(`${baseUrl}exercise/${id}`, exerciseOptions)
       setExerciseDetail(exerciseDetailData)
 
-      const exerciseVideoData = await fetchData(`${baseYouTubeURL}/search?q=${exerciseDetail.name}`,)
+      const exerciseVideoData = await fetchData(`${baseYouTubeURL}/search?q=${exerciseDetail.name}`, youTubeOptions)
       setVideosList(exerciseVideoData)
     }
     fetchExerciseData()
