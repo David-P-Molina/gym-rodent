@@ -14,7 +14,7 @@ const ExerciseVideos = ({ videosList, name }) => {
           flexDirection: { lg: 'row' },
           gap: { lg: '100px', xs: '0px'}
         }}>
-          {videosList?.slice(0,4).map((video, index) => {
+          {videosList?.slice(1,4).map((video, index) => (
             <a
               key={index}
               className='exercise-video'
@@ -22,8 +22,14 @@ const ExerciseVideos = ({ videosList, name }) => {
               target="_blank"
               rel='noreferrer'>
                 <img src={video.video.thumbnails[0].url} alt={video.video.title}/>
+            <Typography>
+              {video.video.title}
+            </Typography>
+            <Typography>
+              {video.video.channelName}
+            </Typography>
             </a>
-            })}
+            ))}
       </Stack>
     </Box>
   )
