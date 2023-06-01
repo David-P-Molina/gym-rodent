@@ -8,7 +8,7 @@ import SimilarExercises from '../components/SimilarExercises'
 
 const ExerciseDetail = () => {
   const [exerciseDetail, setExerciseDetail] = useState({})
-  const [videosList, setVideosList] = useState(second)
+  const [videosList, setVideosList] = useState([])
   const { id } = useParams()
   useEffect(() => {
     const fetchExerciseData = async () => {
@@ -24,7 +24,7 @@ const ExerciseDetail = () => {
   return (
     <Box>
       <Detail exerciseDetail={exerciseDetail} />
-      <ExerciseVideos videosList={videosList} />
+      <ExerciseVideos videosList={videosList} name={exerciseDetail.name} />
       <SimilarExercises />
     </Box>
   )
