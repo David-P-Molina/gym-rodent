@@ -22,12 +22,14 @@ const ExerciseVideos = ({ videosList, name }) => {
               target="_blank"
               rel='noreferrer'>
                 <img src={video.video.thumbnails[0].url} alt={video.video.title}/>
-            <Typography>
-              {video.video.title}
-            </Typography>
-            <Typography>
-              {video.video.channelName}
-            </Typography>
+            <Box>
+              <Typography sx={{ fontSize: { lg: '28px', xs: '18px' } }} fontWeight={600} color='#000'>
+                {video.video.title}
+              </Typography>
+              <Typography fontSize='14px' color='#000'>
+                {video.video.channelName}
+              </Typography>
+            </Box>
             </a>
             ))}
       </Stack>
