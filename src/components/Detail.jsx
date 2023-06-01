@@ -6,7 +6,6 @@ import EquipmentImage from '../assets/icons/equipment.png'
 
 const Detail = ({ exerciseDetail }) => {
   const { bodyPart, gifUrl, name, target, equipment } = exerciseDetail
-
   const extraDetail = [
     { 
       icon: BodyPartImage,
@@ -21,6 +20,7 @@ const Detail = ({ exerciseDetail }) => {
       name: equipment
     },
   ]
+  
   return (
     <Stack
       gap='60px'
@@ -40,6 +40,16 @@ const Detail = ({ exerciseDetail }) => {
           Exercises keep you strong. The {name} exercise is one of the best at 
           targeting your {bodyPart}. it will help you improve your mood & energy
         </Typography>
+        {extraDetail.map((item) => (
+          <Stack key={item.name} direction='row' gap='24px' alignItems='center'>
+            <Button>
+              <img src={item.icon} alt={item.name} />
+            </Button>
+            <Typography textTransform='capitalize'>
+              {item.name}
+            </Typography>
+          </Stack>
+        ))}
       </Stack>
     </Stack>
   )
