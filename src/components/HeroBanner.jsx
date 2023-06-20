@@ -15,7 +15,8 @@ const HeroBanner = () => {
           sx={{ fontSize: { lg: '44px', xs: '40px'} }}
           mb='23px'
           mt='30px'>
-            Sweat, Smile <br /> & Repeat
+            Sweat, Smile <br /> 
+            & Repeat
         </Typography>
         <Typography fontSize='22px' lineHeight='35px' mb={4} fontFamily="Alegreya">
           Check out new exercises and keep your body working!

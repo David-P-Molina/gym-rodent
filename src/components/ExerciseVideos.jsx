@@ -30,8 +30,8 @@ const ExerciseVideos = ({ videosList, name }) => {
                 {video.video.channelName}
               </Typography>
             </Box>
-            </a>
-            ))}
+          </a>
+          ))}
       </Stack>
     </Box>
   )
