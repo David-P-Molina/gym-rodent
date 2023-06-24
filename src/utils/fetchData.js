@@ -6,7 +6,7 @@ export const exerciseOptions = {
     }
   };
 
- export const youTubeOptions = {
+ export const youtubeOptions = {
     method: 'GET',
     headers: {
       'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
@@ -21,4 +21,4 @@ export const fetchData = async ( url, options ) => {
     return data
 }
 export const baseUrl = 'https://exercisedb.p.rapidapi.com/exercises/'
-export const baseYouTubeURL = 'https://youtube-search-and-download.p.rapidapi.com'
+export const baseYoutubeURL = 'https://youtube-search-and-download.p.rapidapi.com'
