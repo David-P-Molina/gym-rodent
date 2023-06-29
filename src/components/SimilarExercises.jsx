@@ -14,6 +14,9 @@ const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => {
            <HorizontalScrollBar data={targetMuscleExercises} />:
            <Loader/>}
       </Stack>
+      <Typography variant='h5' mb={5}>
+        Exercises that use the same equipment
+      </Typography>
     </Box>
   )
 }
