@@ -7,11 +7,14 @@ const Footer = () => {
   return (
     <Box mt='80x' bgcolor='#f2f3f4' height='100px' p='10px'>
       <Stack 
-        direction='row' 
         justifyContent='space-around' 
-        alignItems='flex-end'
+        alignItems='center'
+        px='40px'
+        pt='24px'
+        gap='40px'
         space={0}>
-        Footer
+        <img src={Logo} alt='logo' width='200px' height='40px'/>
+        <Typography variant='h6' pb='40px' mt='20px'>Created with JavaScript Mastery Tutorial</Typography>
         <p>
           <a href='https://pngtree.com/so/gym'>gym png from pngtree.com/</a>
         </p>
