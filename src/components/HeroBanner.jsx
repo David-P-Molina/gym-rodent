@@ -27,7 +27,7 @@ const HeroBanner = () => {
         <Typography
           fontWeight={600}
           color="#FF2625"
-          sx={{ opacity: '0.1', display: { lg: 'block', xs: 'none'} }} fontSize='200px'>
+          sx={{ opacity: '0.2', display: { lg: 'block', xs: 'none'} }} fontSize='200px'>
           Daily Movement
         </Typography>
         <img src={ HeroBannerImage } alt="Workout Banner" className="hero-banner-img"/>
